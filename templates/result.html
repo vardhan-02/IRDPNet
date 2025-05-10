@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segmentation Result</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .image-container {
+            margin: 0 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #333;
+            border-radius: 10px;
+        }
+        h3 {
+            font-family: Arial, sans-serif;
+            color: #444;
+        }
+        .button {
+            display: block;
+            text-align: center;
+            margin-top: 30px;
+        }
+        a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="image-container">
+            <h3>Original Image</h3>
+            <img src="{{ url_for('static', filename='uploads/' + original_image) }}" alt="Original Image">
+        </div>
+        <div class="image-container">
+            <h3>Segmented Image</h3>
+            <img src="{{ url_for('static', filename='segmented_output/' + segmented_image) }}" alt="Segmented Image">
+        </div>
+    </div>
+
+    <div class="button">
+        <a href="{{ url_for('upload_and_predict') }}">Upload Another Image</a>
+    </div>
+
+</body>
+</html>

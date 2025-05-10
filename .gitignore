@@ -1,0 +1,30 @@
+# Ignore dataset files
+dataset/cityscapes/leftImg8bit/
+dataset/cityscapes/gtFine/
+static/
+
+# Ignore Python cache and checkpoints
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.ipynb_checkpoints/
+
+# Ignore model checkpoints
+checkpoint/
+*.ckpt
+*.pth
+*.h5
+
+# Ignore result files
+result/
+output/
+logs/
+
+# Ignore common large files
+*.zip
+*.tar
+*.tar.gz
+
+# Ignore virtual environments
+venv/

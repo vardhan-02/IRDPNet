@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Upload for Segmentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: url('static/background.png') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: space-between; /* Align content properly */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+            color: #f0f0f0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 40px 50px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            width: 350px;
+            margin: auto;
+        }
+
+        h1 {
+            font-size: 22px;
+            color: #007BFF;
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            margin: 10px 0 20px 0;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #f0f0f0;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 14px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .main-content {
+            flex: 1; /* Ensures footer stays at the bottom even with less content */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Image Segmentation Tool
+    </header>
+
+    <div class="main-content">
+        <div class="container">
+            <h1>Upload PNG File for Segmentation</h1>
+            <form action="/" method="post" enctype="multipart/form-data">
+                <input type="file" name="file" accept=".png" />
+                <input type="submit" value="Upload and Segment" />
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Segmentation Project | Built with Flask & PyTorch
+    </footer>
+
+</body>
+</html>
