@@ -1,4 +1,4 @@
-﻿#Image Segmentation for Autonomus Vehicle Perception System
+﻿# Image Segmentation for Autonomus Vehicle Perception System
 
 
 IRDPNet is an innovative deep learning model designed to enhance the performance of infrared (IR) and depth (RGB-D) image processing tasks. By leveraging the complementary information from both IR and depth modalities, IRDPNet aims to improve accuracy and robustness in various applications, including object detection, scene understanding, and robotics.
@@ -16,6 +16,7 @@ Feature Fusion: Combines features from both branches to enhance prediction accur
 Robust Performance: Maintains high performance in challenging conditions, including low-light environments.
 
 Modular Design: Easily adaptable for various tasks, including object detection and scene segmentation.
+
 
 
 
